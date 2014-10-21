@@ -1,0 +1,46 @@
+/*
+ * Basic styles for zhongyidong 
+ *
+ * @Author      RobinHuang
+ * @Version     1.0
+ * @copyright   2014 ~ 2015
+ */
+
+
+html {margin:0; padding:0; font-size:12px; font-family:"宋体" Arial;}
+div, h1, h2, h3, h4, h5, p, span, img, ul, li {margin:0; padding:0; border:0 none;}
+ul, li {list-style:0 outside 0;}
+body {background:url(../images/bg.jpg) repeat scroll left top #0275ea; background-size:28px 28px; margin:0;}
+.logo {width:98%; height:48px; background:url(../images/logo.jpg) no-repeat scroll center top transparent; background-size:317px 48px; border-radius:5px; margin:2px auto 0;}
+.register {width:92%; margin:14px auto 14px; position:relative;}
+.register .item {background-color:#fbf8f1; overflow:hidden; width:100%; height:56px; border-radius:5px; border:1px solid #c9dae9; margin-bottom:6px; position:relative;}
+.register .item .label {float:left; font-size:12px; color:#563743; font-family:"微软雅黑","黑体",Arial; width:80px; text-align:right; padding-right:16px; height:56px; line-height:56px;}
+.register .item .input {float:left; height:56px;}
+.register .item .input input {width:142px; height:24px; border:1px solid #dad1ce; border-radius:3px; margin-top:13px; background-color:#ffffff;}
+.register .item .input select {width:142px; height:28px; border:0 none; border-bottom:1px solid #c38a3a; border-radius:3px; margin-top:13px; background-color:#f4ad49;}
+.register .item em {color:#db5565; font-size:16px; font-family:"宋体"; position:absolute; left:42px; top:20px;}
+.register .action {margin-top:31px; width:100%;}
+.register .action input {width:100%; height:51px; color:#ffffff; background:url(../images/btn.jpg) repeat-x scroll left top #ff960d; border:0 none; border-radius:5px; background-size:5px 51px; font-size:18px; font-family:"微软雅黑", "黑体", Arial; font-weight:bold;}
+.register .hook {background:url(../images/hook.png) repeat-y scroll left top transparent; background-size:6px 64px; position:absolute; width:6px; height:220px;}
+.register .hook.left {left:28px; top:48px;}
+.register .hook.right {right:28px; top:48px;}
+body.bg2 {background:url(../images/bg2.jpg) repeat scroll left top #ffffff;}
+.bg2 .logo {width:1020px; height:148px; background:url(../images/logo2.jpg) no-repeat scroll center top transparent; margin:0 auto;}
+body.bg2 .container {width:1020px; margin:0 auto;}
+.operation {height:110px; overflow:hidden; width:800px; margin:0 auto;}
+.operation p {width:50%; float:left; padding-top:25px;}
+.operation p .start_btn {background:url(../images/start_btn.jpg) no-repeat scroll left top transparent;}
+.operation p .stop_btn {background:url(../images/stop_btn.jpg) no-repeat scroll left top transparent;}
+.operation p .start_btn, .operation p .stop_btn {width:170px; height:54px; line-height:54px; color:#fff; text-align:center; font-size:24px; font-weight:bold; border:0 none; cursor:pointer; display:inline-block;}
+.display {width:780px; margin:0 auto 12px; background-color:#fff; border:1px solid #d2caca; height:48px; border-radius:6px; line-height:48px; font-size:24px; padding:0 10px; color:#555555; text-align:center;}
+.result {width:800px; margin:0 auto; position:relative; margin-bottom:20px;}
+.result .header {background:url(../images/draw_result_header.jpg) no-repeat scroll left bottom #fcdd10; height:96px; border-top-left-radius:6px; border-top-right-radius:6px;}
+.result .header .c1, .result .header .c2 {width:50%; color:#593442; float:left; text-align:center; height:76px; line-height:76px; font-size:24px;}
+.result .content {margin:0 auto; min-height:300px; background-color:#fbf8f1; border-bottom-left-radius:6px; border-bottom-right-radius:6px; box-shadow:1px 3px 3px #BBB; padding-top:12px; padding-bottom:30px;}
+.result .content .record {height:32px; line-height:32px;}
+.result .content .record .c1, .result .content .record .c2 {width:49%; color:#242423; text-align:center; float:left; font-size:16px;}
+.result .content .record .c1 {border-right:1px solid #e3dbd7; width:50%;}
+.result .content .record .value {border-bottom:1px dashed #e3dbd7; display:inline-block; height:32px; line-height:32px; width:200px;}
+.result .gift {width:100px; height:115px; background:url(../images/gift.jpg) no-repeat scroll right bottom #fbf8f1; position:absolute; right:10px; bottom:10px;}
+.clear_box {margin-top:10px;}
+.clear_box input {width:120px; padding:10px 0;}
