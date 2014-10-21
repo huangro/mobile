@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, minimum-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="阜博通致力于提供全球领先的音视频内容识别技术和服务，实现音视频的有效保护和商业增值。公司自主研发的核心专利影视基因技术广泛应用于新媒体版权管理、网络音像内容管理、网络视频定向广告动态插播、基于音视频内容的新一代搜索引 /擎等热点领域。">
+<meta name="keywords" content="Vobile, 阜博通，影视基因，音视频内容识别，新媒体版权管理，音视频内容增值，网络音像内容管理，网络视频定向广告、音视频搜索引擎">
+<title>跨入职业快车道-阜博通2015杭州校园宣讲会</title>
+<link rel="icon" href="http://www.vobileinc.com/favicon.ico" mce_href="http://www.vobileinc.com/favicon.ico" type="image/x-icon" />
+<link type="image/x-icon" href="http://www.vobileinc.com/favicon.ico" rel="Shortcut Icon" />
+<link rel="stylesheet" type="text/css" href="style/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<link rel="stylesheet" type="text/css" href="style/animate.min.css" />
+<!--[if IE]>
+    <script type="text/javascript">
+         var console = { log: function() {} };
+    </script>
+<![endif]-->
+<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+<script src="js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var isNavigation = minWidth(1000);
+    $(window).resize(function() {
+        isNavigation = minWidth(1000);
+    })
+    var timer;
+    $('#main').fullpage({
+        anchors: ['home','12'],
+        sectionsColor: ['#FFF','#191919','#191919','#191919','#191919','#191919','#191919'],
+        scrollOverflow: true,
+        //paddingTop:$("#header").css("height"),
+        //autoScrolling: false,
+        resize:false,
+        //navigation: isNavigation,
+        navigationPosition: 'left',
+        //navigationTooltips: ['首页'],
+        slidesNavigation: true,
+        //touchSensitivity: 15,
+        verticalCentered: false,
+        //normalScrollElementTouchThreshold: 5,
+        afterSlideLoad:function(anchorLink,index,slideIndex,direction){
+            //alert(index)
+        },
+        afterRender:function(){
+             $("#car").delay(1000).animate({ 
+                bottom: $("body").height()*(1297/1500)+"px",
+                width:10,
+                marginLeft:0
+              },3000,function(){$(this).css("bottom","-50px")});
+              
+              $("#dressTop").height($("body").height()*(1-1297/1500));
+              $(window).resize(function(){
+                 $("#dressTop").height($("body").height()*(1-1297/1500));
+              })
+        },
+        onLeave:function(index,nextIndex,direction){//滚动前的回调函数direction 判断往上滚动还是往下滚动，值是 up 或 down。
+            if(nextIndex==7) $("#top").fadeOut();
+            else $("#top").fadeIn();
+            switch(index){
+                case 1:
+                
+                break;
+                case 2:
+                    clearInterval(timer);
+                    $("#p2 .animated").removeClass("bounceInRight").removeClass("fadeInUp");
+                break;
+                case 3:
+                    clearInterval(timer);
+                    $("#p3 .animated").removeClass("lightSpeedIn");
+                break;
+                case 4:
+                    clearInterval(timer);
+                    $("#p4 .animated").removeClass("bounceInLeft").removeClass("bounceInRight");
+                break;
+                case 6:
+                    clearInterval(timer);
+                    $("#p5 .animated").removeClass("flipInX").removeClass("flipInY");
+                break;
+                case 5:
+                    clearInterval(timer);
+                    $("#p6 .animated").removeClass("flipInX").removeClass("flipInY");
+                break;
+                case 7:
+                    $("#p7 .animated").removeClass("fadeIn");
+                break;
+            }
+        },
+        afterLoad:function(anchorLink,index){//滚动到某一屏后的回调函数
+            $(".animated").attr("style",function(){
+                if($(this).parents(".section").index()!=index)
+                    return "";
+            });
+            switch(index){
+                case 1:
+                    $("#car").stop().removeAttr("style").delay(1000).animate({ 
+                        bottom: $("body").height()*(1297/1500)+"px",
+                        width:10,
+                        marginLeft:0
+                     },3000,function(){$(this).removeAttr("style")});
+                     
+                break;
+                case 2:
+                    var i=0
+                    timer=setInterval(function(){
+                        $("#p2 .animated:eq("+(i++)+")").addClass(function(){
+                            if(i>6)
+                                return "fadeInUp"
+                            return "bounceInRight";
+                        }).css("opacity",1);
+                        if(i==11)
+                            clearInterval(timer);
+                    },300);
+                break;
+                case 3:
+                    var i=0
+                    timer=setInterval(function(){
+                        $("#p3 .animated:eq("+(i++)+")").addClass(function(){
+                            return "lightSpeedIn";
+                        }).css("opacity",1);
+                        if(i==10)
+                            clearInterval(timer);
+                    },300);
+                break;
+                case 4:
+                    var i=0
+                    timer=setInterval(function(){
+                        $("#p4 .animated:eq("+(i++)+")").addClass(function(){
+                            if($(this).index()%2==0)
+                                return "bounceInRight";
+                            return "bounceInLeft";
+                        }).css("opacity",1);
+                        if(i==4)
+                            clearInterval(timer);
+                    },300);
+                break;
+                case 6:
+                    var i=0
+                    timer=setInterval(function(){
+                        $("#p5 .animated:eq("+(i++)+")").addClass(function(){
+                            if($(this).index()%2==0)
+                                return "flipInX";
+                            return "flipInY";
+                        }).css("opacity",1);
+                        if(i==14)
+                            clearInterval(timer);
+                    },100);
+                break;
+                case 5:
+                    var i=0
+                    timer=setInterval(function(){
+                        $("#p6 .animated:eq("+(i++)+")").addClass(function(){
+                            if($(this).index()%2==0)
+                                return "flipInX";
+                            return "flipInY";
+                        }).css("opacity",1);
+                        if(i==14)
+                            clearInterval(timer);
+                    },100);
+                break;
+                case 7:
+                $("#p7 .animated").addClass("fadeIn");
+                break;
+            }
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+<section id="main">
+    <img src="images/top.png" id="top" class="animation-transition" />
+    <section class="section" id="p1">
+        <div class="content max-width">
+            <div class="dress-top" id="dressTop"></div>
+            <img src="images/car.png" id="car" />
+            <div class="scroll-top"><span class="icon"></span>向上滑动</div>
+        </div>
+    </section>
+    <section class="section" id="p2">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <img src="images/p2_title.png" class="page-title" />
+            <p>如果你心怀一个创业梦想， Vobile是一个可以圆梦的地方。一切不必从零开始，你的起点就是我们的肩膀。</p>
+            <p>我们正在寻找可以肩负光荣使命的勇士，加入我们，拥抱世界！你将有机会，同Vobile全球精英人才共聚一堂，挑战精英，成为精英！ </p>
+            <p>国际管理培训生梦想站点：<br /><span class="Ca18154">美国硅谷/洛杉矶、日本东京、新加坡、韩国首尔、俄罗斯莫斯科</span></p>
+            <p>只要你够优秀，欢迎报名<b>Vobile国际管理培训生</b>，挑战精英计划，获得Vobile海外Office工作机会，前往全球五大梦想站点开启你的职业生涯吧！</p>
+            <div class="g">
+                <img src="images/p2_1.png" class="p2_img animated p2_1" />
+                <img src="images/p2_2.png" class="p2_img animated p2_2" />
+                <img src="images/p2_3.png" class="p2_img animated p2_3" />
+                <img src="images/p2_4.png" class="p2_img animated p2_4" />
+                <img src="images/p2_5.png" class="p2_img animated p2_5" />
+                <img src="images/p2_6.png" class="p2_img animated p2_6" />
+                <img src="images/p2_l1.png" class="p2_img animated p2_l1" />
+                <img src="images/p2_l2.png" class="p2_img animated p2_l2" />
+                <img src="images/p2_l3.png" class="p2_img animated p2_l3" />
+                <img src="images/p2_l4.png" class="p2_img animated p2_l4" />
+                <img src="images/p2_l5.png" class="p2_img animated p2_l5" />
+            </div>
+        </div>
+    </section>
+    <section class="section" id="p3">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <img src="images/p3_title.png" class="page-title" />
+            <div class="g">
+            <img src="images/p3_1.png" class="p3_img animated p3_1" />
+            <img src="images/p3_2.png" class="p3_img animated p3_2" />
+            <img src="images/p3_3.png" class="p3_img animated p3_3" />
+            <img src="images/p3_4.png" class="p3_img animated p3_4" />
+            <img src="images/p3_5.png" class="p3_img animated p3_5" />
+            <img src="images/p3_6.png" class="p3_img animated p3_6" />
+            <img src="images/p3_7.png" class="p3_img animated p3_7" />
+            <img src="images/p3_8.png" class="p3_img animated p3_8" />
+            <img src="images/p3_9.png" class="p3_img animated p3_9" />
+            <img src="images/p3_10.png" class="p3_img animated p3_10" />
+            </div>
+        </div>
+    </section>
+    <section class="section" id="p4">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <img src="images/p4_title.png" class="page-title" />
+            <img src="images/jobs1.png" class="jobs1 animated" />
+            <img src="images/jobs2.png" class="jobs2 animated" />
+            <img src="images/jobs3.png" class="jobs3 animated" />
+            <img src="images/jobs4.png" class="jobs4 animated" />
+        </div>
+    </section>
+    
+    <section class="section" id="p6">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <div class="g">
+                <img src="images/p6_1.png" class="p6_img animated p6_1" />
+                <img src="images/p6_2.png" class="p6_img animated p6_2" />
+                <img src="images/p6_3.png" class="p6_img animated p6_3" />
+                <img src="images/p6_4.png" class="p6_img animated p6_4" />
+                <img src="images/p6_5.png" class="p6_img animated p6_5" />
+                <img src="images/p6_6.png" class="p6_img animated p6_6" />
+                <img src="images/p6_7.png" class="p6_img animated p6_7" />
+                <img src="images/p6_8.png" class="p6_img animated p6_8" />
+                <img src="images/p6_9.png" class="p6_img animated p6_9" />
+                <img src="images/p6_10.png" class="p6_img animated p6_10" />
+                <img src="images/p6_11.png" class="p6_img animated p6_11" />
+                <img src="images/p6_12.png" class="p6_img animated p6_12" />
+                <img src="images/p6_13.png" class="p6_img animated p6_13" />
+                <img src="images/p6_14.png" class="p6_img animated p6_14" />
+            </div>
+        </div>
+    </section>
+    <section class="section" id="p5">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <div class="g">
+                <img src="images/p5_1.png" class="p5_img animated p5_1" />
+                <img src="images/p5_2.png" class="p5_img animated p5_2" />
+                <img src="images/p5_3.png" class="p5_img animated p5_3" />
+                <img src="images/p5_4.png" class="p5_img animated p5_4" />
+                <img src="images/p5_5.png" class="p5_img animated p5_5" />
+                <img src="images/p5_6.png" class="p5_img animated p5_6" />
+                <img src="images/p5_7.png" class="p5_img animated p5_7" />
+                <img src="images/p5_8.png" class="p5_img animated p5_8" />
+                <img src="images/p5_9.png" class="p5_img animated p5_9" />
+                <img src="images/p5_10.png" class="p5_img animated p5_10" />
+                <img src="images/p5_11.png" class="p5_img animated p5_11" />
+                <img src="images/p5_12.png" class="p5_img animated p5_12" />
+                <img src="images/p5_13.png" class="p5_img animated p5_13" />
+            </div>
+        </div>
+    </section>
+    <section class="section" id="p7">
+        <div class="roadIcon hover"></div>
+        <div class="road-right"></div>
+        <div class="content max-width">
+            <img src="images/p7_title.png" class="page-title" />
+            <p class="p6-title">阜博通2015校园招聘  期待你的加入</p>
+            <img src="images/p7_1.png" class="p7_img animated p7_1" />
+            <p>现场神秘大礼，扫微信 ，人人有礼</p>
+        </div>
+        <p class="footer">更多职位信息请登录<br /><span class="Ca18154">campus.vobile.cn</span></p>
+    </section>
+</section>
+</body>
+</html>
+
+
