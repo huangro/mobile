@@ -1,0 +1,25 @@
+/*
+ * Basic styles for finance accelerate
+ *
+ * @Author      RobinHuang
+ * @Version     1.0
+ * @copyright   2014 ~ 2015
+ */
+
+
+html {margin:0; padding:0; font-size:12px; font-family:"宋体" Arial;}
+div, h1, h2, h3, h4, h5, p, span, img, ul, li {margin:0; padding:0; border:0 none;}
+ul, li {list-style:0 outside 0;}
+body {background:#F5E2B5; background-size:28px 28px; margin:0;}
+.logo {width:98%; height:70px; background:url(../images/logo.gif) no-repeat scroll center center transparent; border-radius:5px; margin:2px auto 0;}
+.register {width:92%; margin:14px auto 14px; position:relative;}
+.register .item {background-color:#fbf8f1; overflow:hidden; width:100%; height:56px; border-radius:5px; border:1px solid #c9dae9; margin-bottom:6px; position:relative;}
+.register .item .label {float:left; font-size:12px; color:#563743; font-family:"微软雅黑","黑体",Arial; width:80px; text-align:right; padding-right:16px; height:56px; line-height:56px;}
+.register .item .input {float:left; height:56px;}
+.register .item .input input {width:200px; height:24px; border:1px solid #dad1ce; border-radius:3px; margin-top:13px; background-color:#ffffff; padding-left:4px;}
+.aregister .item .input select {width:200px; height:28px; border:0 none; border-bottom:1px solid #c38a3a; border-radius:3px; margin-top:13px; background-color:#f4ad49;}
+.register .item em {color:#db5565; font-size:16px; font-family:"宋体"; float:left; margin-top:22px; margin-left:4px;}
+.register .action {margin-top:10px; width:100%;}
+.register .action input {width:100%; height:51px; color:#ffffff; background:#ff960d; border:0 none; border-radius:5px; background-size:5px 51px; font-size:18px; font-family:"微软雅黑", "黑体", Arial; font-weight:bold; cursor:pointer;}
+.clear_box {margin-top:10px;}
+.clear_box input {width:120px; padding:10px 0;}
